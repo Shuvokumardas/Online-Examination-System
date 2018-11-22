@@ -1,0 +1,22 @@
+Question Table Create Query:
+
+
+CREATE TABLE computer_science_1 (
+q_no INT PRIMARY KEY,
+q VARCHAR(250) NOT NULL,
+o_1 VARCHAR(50) NOT NULL,
+o_2 VARCHAR(50) NOT NULL,
+o_3 VARCHAR(50) NOT NULL,
+o_4 VARCHAR(50) NOT NULL,
+r VARCHAR(50) NOT NULL
+)
+
+set @rank=0;
+
+select @rank:=@rank+1 as rank , username, exam, correct, wrong, not_answered from 
+
+(select username, exam, correct, wrong, not_answered from register order by exam) as t
+
+$sql = "UPDATE register SET password='{$password}', fname='{$fname}', lname='{$lname}', gender='{$gender}', address='{$address}', emailid='{$email}', phone='{$phone}' WHERE username=$user";
+
+$sql=mysql_query("SELECT count(*) as count FROM information_schema.VIEWS WHERE (TABLE_SCHEMA = 'project') AND (TABLE_NAME = 'sakib')");
